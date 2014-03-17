@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Formats selected text to paste into HipChat with /code prefix",
   "activationEvents": ["copy-to-hipchat:copy"],
-  "repository": "https://github.com/phlco/copy-to-hipchat-atom",
+  "repository": "https://github.com/phlco/copy-to-hipchat",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
