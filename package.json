@@ -1,14 +1,15 @@
 {
   "name": "copy-to-hipchat",
   "main": "./lib/copy-to-hipchat",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Formats selected text to paste into HipChat with /code prefix",
-  "activationEvents": ["copy-to-hipchat:copy"],
+  "activationEvents": [
+    "copy-to-hipchat:copy"
+  ],
   "repository": "https://github.com/phlco/copy-to-hipchat",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
