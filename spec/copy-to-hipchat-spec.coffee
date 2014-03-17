@@ -19,6 +19,7 @@ describe "CopyToHipchat", ->
     atom.workspaceView.trigger 'copy-to-hipchat:copy'
     waitsForPromise ->
       promise
+
   it "requires a selection", ->
     editor = atom.workspaceView.getActivePaneItem()
     selection = editor.getSelection()
@@ -26,9 +27,11 @@ describe "CopyToHipchat", ->
     title = editor.getTitle()
     atom.workspaceView.trigger("copy-to-hipchat:copy")
     text = atom.clipboard.read()
-    expect( text ).toEqual('initial clipboard content')
     waitsForPromise ->
       promise
+    expect( text ).toEqual('initial clipboard content')
+
+
   it "appends `/code`", ->
     editor = atom.workspaceView.getActivePaneItem()
     editor.setText("abcd")
@@ -39,6 +42,7 @@ describe "CopyToHipchat", ->
     waitsForPromise ->
       promise
     expect(text).toMatch(/\/code/)
+
   it "appends title", ->
     editor = atom.workspaceView.getActivePaneItem()
     editor.setText("abcd")

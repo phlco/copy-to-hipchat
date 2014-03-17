@@ -6,6 +6,7 @@ module.exports =
     editor    = atom.workspace.activePaneItem
     selection = editor.getSelection()
     text      = selection.getText()
+
     if (text)
       title     = editor.getTitle()
       scopes    = editor.getCursorScopes()
@@ -15,6 +16,6 @@ module.exports =
       commentedTitle = "#{commentStart}#{title}#{commentEnd}"
 
       clipboard = atom.clipboard
-      clipboard.write("/code \n#{commentedTitle}\n#{text}")
+      clipboard.write("/code #{commentedTitle}\n#{text}")
     else
       console.error("Requires a selection")
