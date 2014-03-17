@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable copy-to-hipchat': 'copy-to-hipchat:copy'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'copy-to-hipchat'
+      'submenu': [
+        { 'label': 'Copy', 'command': 'copy-to-hipchat:copy' }
+      ]
+    ]
+  }
+]
